@@ -1,0 +1,28 @@
+.btn{
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    border-radius: .5rem;
+    cursor: pointer;
+    font: var(--button);
+}
+.btn-sm{
+    padding: .75rem 1.25rem;
+    background-color: var(--pink-dark);
+}
+.btn-sm:hover{
+    background-color: var(--pink-base);
+}
+.container{
+    --max-width: 375px;
+    width: min(var(--max-width), 100% - 1.25rem * 2);
+    margin-inline: auto;
+}
+
+@media (width >= 80em){
+    .container{
+        --max-width: 80rem;
+    }
+}
