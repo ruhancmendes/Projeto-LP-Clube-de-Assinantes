@@ -1,0 +1,66 @@
+.hero{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../assets/images/hero-background.png);
+}
+.marca{
+    background-image: url(../assets/icons/logo-horizontal.svg);
+    width: 230px;
+    height: 58px;
+}
+nav{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70rem;
+}
+.chamada{
+    margin-top: 10.25rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 39rem;
+    gap: 2rem;
+}
+h1{
+    font: 700 3rem var(--ff-base);
+    color: var(--text-title);
+}
+.subtitle{
+    font: 400 1.25rem/140% var(--ff-base);
+}
+.intro{
+    margin-top: 6rem;
+    width: 75rem;
+    display: flex;
+    flex-direction: column;
+
+    & p{
+        font: 400 2rem/200% var(--ff-base);
+        color: var(--text-label);
+        text-align: center;
+
+        & span{
+            font: 700 2rem/200% var(--ff-base);
+        }
+    }
+
+    & img{
+        width: 5rem;
+    }
+}
+.spellbook{
+    display: flex;
+    justify-content: center;
+}
+.mystery{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
