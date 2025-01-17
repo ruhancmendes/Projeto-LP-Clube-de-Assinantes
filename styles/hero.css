@@ -6,7 +6,18 @@
     background-position: center;
     background-size: cover;
     background-image: url(../assets/images/hero-background.png);
+
+    animation: background-appear linear;
+    animation-duration: 2s;
+    animation-delay: 600ms;
 }
+
+@keyframes background-appear{
+    from{
+        opacity: 0;
+    }
+}
+
 .marca{
     background-image: url(../assets/icons/logo-horizontal.svg);
     width: 230px;
@@ -34,12 +45,21 @@ h1{
 }
 .subtitle{
     font: 400 1.25rem/140% var(--ff-base);
+    animation: text-appear linear;
+    animation-duration: 3s;
+    animation-delay: 600ms;
+}
+@keyframes text-appear{
+    from{
+        opacity: 0;
+    }
 }
 .intro{
     margin-top: 6rem;
     width: 75rem;
     display: flex;
     flex-direction: column;
+    margin-bottom: 5rem;
 
     & p{
         font: 400 2rem/200% var(--ff-base);
@@ -53,8 +73,35 @@ h1{
 
     & img{
         width: 5rem;
+        opacity: 0;
     }
 }
+
+.intro{
+    & p{
+        transition: color 2s 500ms ease-in-out;
+
+        & span{
+            transition: color 2s 500ms ease-in-out;
+        }
+    }
+    & img{
+        transition: opacity 2s 500ms ease-in-out; 
+    }
+}
+.intro:hover{
+    & p{
+        color: var(--text-title);
+        & span{
+            color: var(--blue-light);
+        }
+    }
+
+    & img{
+        opacity: 1;
+    }
+}
+
 .spellbook{
     display: flex;
     justify-content: center;
@@ -63,4 +110,79 @@ h1{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.spellbook,
+.ouija,
+.ball{
+    transition: transform 1s 500ms ease;
+}
+.spellbook:hover,
+.ouija:hover,
+.ball:hover{
+    transform: rotate(30deg);
+}
+
+@media (width <= 375px){
+    nav{
+        margin-top: 1.25rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 20rem;
+    }
+
+    .marca{
+        background-image: url(../assets/icons/logo-symbol.svg);
+        width: 78px;
+        height: 58px;
+    }
+
+    .hero{
+        width: 375px;
+        height: 464px;
+        background-position: center;
+        background-size: cover;
+        background-image: url(../assets/images/hero-background.png);
+    }
+
+    .chamada{
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        width: 21rem;
+        gap: 1rem;
+    }
+
+    h1{
+        font: 700 1.75rem var(--ff-base);
+        color: var(--text-title);
+    }
+
+    .subtitle{
+        font: 400 0.875rem/140% var(--ff-base);
+    }
+
+    .intro{
+        margin-top: 2rem;
+        width: 21rem;
+        display: flex;
+        flex-direction: column;
+    
+        & p{
+            font: 400 1rem/200% var(--ff-base);
+            color: var(--text-label);
+            text-align: center;
+    
+            & span{
+                font: 700 1rem/200% var(--ff-base);
+            }
+        }
+    
+        & img{
+            width: 2.5rem;
+        }
+    }
 }
