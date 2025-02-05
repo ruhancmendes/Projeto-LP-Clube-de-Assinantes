@@ -1,0 +1,146 @@
+.container {
+  margin-inline: auto;
+}
+.kitMensal {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 95.25rem;
+}
+.kit-title {
+  margin-top: 10.7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4rem;
+
+  & > div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+h2 {
+  font: 700 2rem var(--ff-base);
+  color: var(--text-title);
+}
+.kitBook {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 57.5rem;
+  position: relative;
+}
+.book {
+  position: absolute;
+  z-index: 1;
+  & img[src*="book"] {
+    width: 29.188rem;
+    height: 38.563rem;
+  }
+}
+/*posição inicial*/
+.capa,
+.pin,
+.bookmark {
+  position: absolute;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.6);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/*posição final*/
+.kitBook:hover .capa {
+  opacity: 1;
+  transform: translate(-450px, -370px) scale(1);
+}
+.kitBook:hover .pin {
+  opacity: 1;
+  transform: translate(-435px, 15px) scale(1);
+}
+.kitBook:hover .bookmark {
+  opacity: 1;
+  transform: translate(110px, -400px) scale(1);
+}
+
+/*delay animação*/
+.kitBook:hover .capa {
+  transition-delay: 0.3s;
+}
+.kitBook:hover .pin {
+  transition-delay: 0.3s;
+}
+.kitBook:hover .bookmark {
+  transition-delay: 0.3s;
+}
+
+/* Non-hover state transitions */
+.capa,
+.pin,
+.bookmark {
+  transition: opacity 0.6s ease, transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (width <= 375px) {
+  .kitMensal {
+    height: 39.438rem;
+  }
+
+  .kit-title {
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    font: 700 1.5rem var(--ff-base);
+  }
+
+  .star {
+    width: 3.5rem;
+  }
+
+  .kit-sub {
+    font: 400 0.875rem var(--ff-base);
+    color: var(--text-body);
+  }
+
+  .kitbook{
+    height: 19.938rem;
+  }
+
+  .book {
+    position: absolute;
+    z-index: 1;
+    & img[src*="book"] {
+      width: 9.824rem;
+      height: 12.98rem;
+    }
+  }
+
+  .capa{
+    opacity: 1;
+    transform: translate(-170px, -120px);
+    & img[src*="capa-dura"]{
+        width: 9rem;
+    }
+  }
+
+  .pin{
+    opacity: 1;
+    transform: translate(-180px, -30px);
+    & img[src*="broche"]{
+        width: 10rem;
+    }
+  }
+
+  .bookmark{
+    opacity: 1;
+    transform: translate(30px, -140px);
+    & img[src*="bookmark"]{
+        width: 10rem;
+    }
+  }
+}
