@@ -1,15 +1,32 @@
 #pricing {
   margin-bottom: 9.375rem;
+  height: 50rem;
+}
+.pricing-bg {
+  display: flex;
+  margin-left: 20%;
+  width: 50rem;
+  height: 50rem;
+  background: var(--shape-base);
+  border-radius: 100%;
+  z-index: 0;
+  opacity: 100%;
+  filter: blur(10rem);
+  position: absolute;
 }
 .container-cards {
   max-width: 80rem;
   margin-inline: auto;
   justify-content: center;
+  z-index: 1;
+  position: relative;
 }
 .header {
   max-width: 18.375rem;
   margin-inline: auto;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 /*cards*/
@@ -27,6 +44,18 @@
   border-radius: 1.5rem;
   padding: 2rem 2rem 1.75rem 2rem;
   transition: transform 500ms;
+
+  li {
+    font: 400 0.75rem/140% var(--ff-base);
+    color: var(--text-body);
+    background: url(../assets/icons/star2.svg) no-repeat;
+    background-size: contain;
+    padding-left: 1.5rem;
+  }
+  .pink {
+    background: url(../assets/icons/star3.svg) no-repeat;
+    background-size: contain;
+  }
 }
 .card:hover {
   background: var(--shape-hover);
@@ -119,17 +148,6 @@ ul[role="list"] {
 .gap-1 {
   gap: 1rem;
 }
-li {
-  font: 400 0.75rem/140% var(--ff-base);
-  color: var(--text-body);
-  background: url(../assets/icons/star2.svg) no-repeat;
-  background-size: contain;
-  padding-left: 1.5rem;
-}
-.pink {
-  background: url(../assets/icons/star3.svg) no-repeat;
-  background-size: contain;
-}
 .btn-md {
   margin-top: 1.5rem;
   display: flex;
@@ -166,38 +184,49 @@ li {
     flex-direction: column;
   }
   .left {
-    position: relative;
-    transform: none;
+    transform: unset;
     z-index: 0;
+    &:hover{
+      transform: unset;
+    }
     & img[src*="left"] {
       opacity: 0;
-      position: absolute;
       top: 0;
       left: 0;
     }
   }
 
   .center {
-    position: relative;
-    transform: none;
     z-index: 0;
+
+    &:hover{
+      transform: unset;
+    }
     & img[src*="bunny"] {
       opacity: 0;
-      position: absolute;
       top: 0;
       left: 0;
     }
   }
 
   .right {
-    position: relative;
-    transform: none;
+    transform: unset;
     z-index: 0;
+    &:hover{
+      transform: unset;
+    }
     & img[src*="right"] {
       opacity: 0;
-      position: absolute;
       top: 0;
       left: 0;
     }
+  }
+  .pricing-bg {
+    width: 20rem;
+    height: 20rem;
+  }
+  #pricing{
+    height: unset;
+    margin-bottom: 0;
   }
 }

@@ -1,0 +1,94 @@
+footer {
+  display: flex;
+  height: 25.938rem;
+  background: center/contain repeat-x
+    url(../assets/images/book-trace-background.png);
+  padding: 10.625rem 10rem 7.125rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.marca {
+  background-image: url(../assets/icons/logo-horizontal.svg);
+  width: 230px;
+  height: 58px;
+}
+.line {
+  height: 1px;
+  width: 260px;
+  margin-block: 1rem;
+  background: var(--blue-dark);
+}
+.socials {
+  display: flex;
+  align-items: center;
+
+  a {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5rem;
+    position: relative;
+
+    & img {
+      width: 1.5rem;
+      height: auto;
+      z-index: 1;
+    }
+
+    &:hover::before {
+      scale: 1;
+    }
+
+    &::before {
+      content: "";
+      width: inherit;
+      height: inherit;
+      border-radius: inherit;
+      background: var(--blue-dark);
+      position: absolute;
+
+      top: 0;
+      left: 0;
+      z-index: 0;
+
+      scale: 0;
+      transition: scale 200ms;
+    }
+  }
+}
+.navegacao {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 3.5rem;
+
+  & .titulo {
+    font: 700 1rem/140% var(--ff-base);
+    color: var(--text-body);
+  }
+
+  & a {
+    font: 400 0.875rem var(--ff-base);
+    color: var(--blue-light);
+
+    &:hover {
+      color: var(--text-body);
+    }
+  }
+}
+@media (width <= 375px) {
+  footer {
+    margin-top: 2.5rem;
+    padding: 6.125rem 2rem 2.375rem;
+    flex-direction: column;
+    background: center/cover repeat-x
+      url(../assets/images/book-trace-background.png);
+  }
+}
