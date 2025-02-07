@@ -1,0 +1,118 @@
+.container-cards {
+  max-width: 80rem;
+  margin-inline: auto;
+  justify-content: center;
+}
+.header {
+  max-width: 18.375rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+/*cards*/
+.cards {
+  margin-top: 3.5rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.card {
+  width: 18rem;
+  background: var(--shape-base);
+  border: 1px solid var(--shape-stroke);
+  border-radius: 1.5rem;
+  padding: 2rem 2rem 1.75rem 2rem;
+}
+h3 {
+  font: 700 1rem var(--ff-base);
+  color: var(--blue-light);
+  margin-bottom: 1.5rem;
+}
+.semestral {
+  color: var(--pink-light);
+}
+.sempop{
+    display: flex;
+    justify-content: space-between;
+}
+.popular{
+    background: var(--shape-stroke);
+    padding: 0.563rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5.625rem;
+    height: 1.875rem;
+    border-radius: 4rem;
+    font: 600 0.625rem var(--ff-base);
+    color: var(--text-body);
+    text-transform: uppercase;
+    letter-spacing: 0.08rem;
+}
+zin-pricing {
+  display: block;
+  padding-block: 0.5rem;
+  font: 700 2.5rem/1.2 var(--ff-base);
+  color: var(--text-title);
+
+  & small {
+    font: 700 1rem/125% var(--ff-base);
+  }
+}
+.price-year {
+  font: 500 0.875rem/140% var(--ff-base);
+  color: var(--text-label);
+  margin-bottom: 4.375rem;
+}
+ul[role="list"] {
+  list-style: none;
+}
+.grid {
+  display: grid;
+}
+.gap-1 {
+  gap: 1rem;
+}
+li {
+  font: 400 0.75rem/140% var(--ff-base);
+  color: var(--text-body);
+  background: url(../assets/icons/star2.svg) no-repeat;
+  background-size: contain;
+  padding-left: 1.5rem;
+}
+.pink {
+  background: url(../assets/icons/star3.svg) no-repeat;
+  background-size: contain;
+}
+.btn-md {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font: 700 0.875rem var(--ff-base);
+  cursor: pointer;
+  background: var(--blue-dark);
+  color: var(--text-title);
+  transition: ease-in-out 200ms;
+}
+.btn-pink {
+  background: var(--pink-dark);
+}
+.btn-md:hover{
+    background: var(--blue-mid);
+}
+.btn-pink:hover{
+    background: var(--pink-base);
+}
+.separator1{
+    margin-block: 2.8rem;
+    height: 1px;
+}
+.separator2{
+    margin-block: 1.8rem;
+    height: 1px;
+}
