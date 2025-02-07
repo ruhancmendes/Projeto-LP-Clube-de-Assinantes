@@ -1,3 +1,6 @@
+#pricing {
+  margin-bottom: 9.375rem;
+}
 .container-cards {
   max-width: 80rem;
   margin-inline: auto;
@@ -11,7 +14,7 @@
 
 /*cards*/
 .cards {
-  margin-top: 3.5rem;
+  margin-top: 4.5rem;
   align-items: center;
   display: flex;
   justify-content: center;
@@ -23,6 +26,48 @@
   border: 1px solid var(--shape-stroke);
   border-radius: 1.5rem;
   padding: 2rem 2rem 1.75rem 2rem;
+  transition: transform 500ms;
+}
+.card:hover {
+  background: var(--shape-hover);
+  transform: translateY(-1.5rem);
+}
+.left {
+  position: relative;
+  transform: rotate(-7deg) translateY(3rem);
+  z-index: 0;
+  & img[src*="left"] {
+    position: absolute;
+    top: -32px;
+    left: -24px;
+  }
+  &:hover {
+    transform: translateY(-1.5rem) rotate(-7deg);
+    z-index: 2;
+  }
+}
+.center {
+  position: relative;
+  z-index: 1;
+  & img[src*="bunny"] {
+    position: absolute;
+    top: -51px;
+    left: 32px;
+  }
+}
+.right {
+  position: relative;
+  transform: rotate(7deg) translateY(3rem);
+  z-index: 0;
+  & img[src*="right"] {
+    position: absolute;
+    bottom: -20px;
+    right: -32px;
+  }
+  &:hover {
+    transform: translateY(-1.5rem) rotate(7deg);
+    z-index: 2;
+  }
 }
 h3 {
   font: 700 1rem var(--ff-base);
@@ -32,23 +77,23 @@ h3 {
 .semestral {
   color: var(--pink-light);
 }
-.sempop{
-    display: flex;
-    justify-content: space-between;
+.sempop {
+  display: flex;
+  justify-content: space-between;
 }
-.popular{
-    background: var(--shape-stroke);
-    padding: 0.563rem 1.25rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 5.625rem;
-    height: 1.875rem;
-    border-radius: 4rem;
-    font: 600 0.625rem var(--ff-base);
-    color: var(--text-body);
-    text-transform: uppercase;
-    letter-spacing: 0.08rem;
+.popular {
+  background: var(--shape-stroke);
+  padding: 0.563rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5.625rem;
+  height: 1.875rem;
+  border-radius: 4rem;
+  font: 600 0.625rem var(--ff-base);
+  color: var(--text-body);
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
 }
 zin-pricing {
   display: block;
@@ -102,17 +147,57 @@ li {
 .btn-pink {
   background: var(--pink-dark);
 }
-.btn-md:hover{
-    background: var(--blue-mid);
+.btn-md:hover {
+  background: var(--blue-mid);
 }
-.btn-pink:hover{
-    background: var(--pink-base);
+.btn-pink:hover {
+  background: var(--pink-base);
 }
-.separator1{
-    margin-block: 2.8rem;
-    height: 1px;
+.separator1 {
+  margin-block: 2.8rem;
+  height: 1px;
 }
-.separator2{
-    margin-block: 1.8rem;
-    height: 1px;
+.separator2 {
+  margin-block: 1.8rem;
+  height: 1px;
+}
+@media (width <= 375px) {
+  .cards {
+    flex-direction: column;
+  }
+  .left {
+    position: relative;
+    transform: none;
+    z-index: 0;
+    & img[src*="left"] {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .center {
+    position: relative;
+    transform: none;
+    z-index: 0;
+    & img[src*="bunny"] {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .right {
+    position: relative;
+    transform: none;
+    z-index: 0;
+    & img[src*="right"] {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
 }
